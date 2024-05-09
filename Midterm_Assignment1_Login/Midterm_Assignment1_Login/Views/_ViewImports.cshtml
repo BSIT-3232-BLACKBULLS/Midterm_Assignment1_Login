@@ -1,3 +1,29 @@
 ﻿@using Midterm_Assignment1_Login
 @using Midterm_Assignment1_Login.Models
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome</h1>
+        <p>This is a sample ASP.NET Core application.</p>
+
+        <form asp-action="SubmitForm" method="post">
+            <label asp-for="Username">Username:</label>
+            <input asp-for="Username" class="form-control" />
+            <span asp-validation-for="Username" class="text-danger"></span>
+
+            <label asp-for="Password">Password:</label>
+            <input asp-for="Password" type="password" class="form-control" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
